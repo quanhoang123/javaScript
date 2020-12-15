@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaiTap1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <button onClick="action();">Try it</button>
+        <img src="" id="ImageButton1">
+    </center>
+
+</body>
+<script>
+    function byId(e) {
+        return document.getElementById(e);
+    }
+    window.addEventListener('load', mInit, true);
+
+    function mInit() {
+        var tgt = byId('ImageButton1');
+        tgt.secondSource = 'img/images.png';
+    }
+
+    function action() {
+        var tgt = byId('ImageButton1');
+        var tmp = tgt.src;
+        tgt.src = tgt.secondSource;
+        tgt.secondSource = tmp;
+    };
+</script>
+
+</html>
